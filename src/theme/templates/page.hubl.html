@@ -1,0 +1,14 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Homepage Template
+-->
+{% extends "./layouts/base.hubl.html" %}
+
+{% block body %}
+  {# Test #}
+  <main>
+  {% module "hero_section" path="../components/modules/hero.jsx", label="Hero Section" %}
+  </main>
+
+{% endblock body %}
