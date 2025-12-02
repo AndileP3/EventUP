@@ -1,0 +1,62 @@
+.header {
+  width: 80%;
+  padding: 10px 0;
+  background: #dbdbdb7d;
+  border: 1px solid #00c106ff;
+  border-radius: 50px;
+  margin: 20px auto 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.container {
+  width: 90%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  font-size: 16px;
+  color: #333333ff;
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .3s ease;
+}
+
+.link:hover {
+  color: #44e782ff;
+}
+
+.contactBtn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff !important;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .3s ease;
+}
+
+.contactBtn:hover {
+  background: #005fcc;
+}
