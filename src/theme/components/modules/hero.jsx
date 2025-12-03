@@ -40,7 +40,10 @@ export const fields = (
     <ImageField
       name="backgroundImage"
       label="Background Image"
-      default="https://images.unsplash.com/photo-1515165562835-c4c36c9f5237"
+      default={{
+        src: "https://images.unsplash.com/photo-1515165562835-c4c36c9f5237",
+        alt: "QR Code Landing Background",
+      }}
     />
     <TextField
       name="defaultUrl"
