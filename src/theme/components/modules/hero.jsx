@@ -1,100 +1,58 @@
-import React from "react";
+// src/theme/components/modules/Hero.jsx
+import { ModuleFields, TextField, ImageField } from "@hubspot/cms-components/fields";
+import { Island } from "@hubspot/cms-components";
+import QRButtonIsland from "../islands/QRButtonIsland?island";
 import styles from "../../styles/home.module.css";
-import { 
-  ModuleFields, 
-  TextField, 
-  ImageField, 
-  DateField 
-} from "@hubspot/cms-components/fields";
 
-// What renders on the page
 export function Component({ fieldValues }) {
-  const { 
-    title,
-    subtitle,
-    backgroundImage,
-    upcomingEventTitle,
-    upcomingEventDate,
-    ctaText,
-    ctaLink
-  } = fieldValues;
+  const { title, subtitle, backgroundImage, defaultUrl } = fieldValues;
 
   return (
-    <section 
-      className={styles.hero}
+    <section
+      className={styles.heroLanding}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className={styles.overlay}>
-        <div className={styles.content}>
-          
-          <h1 className={styles.title}>{title}</h1>
-          <p className={styles.subtitle}>{subtitle}</p>
+      <div className={styles.overlayLanding}>
+        <div className={styles.contentLanding}>
+          <h1 className={styles.titleLanding}>{title}</h1>
+          <p className={styles.subtitleLanding}>{subtitle}</p>
 
-          <div className={styles.eventBox}>
-            <h3 className={styles.eventHeading}>Upcoming Event</h3>
-            <p className={styles.eventTitle}>{upcomingEventTitle}</p>
-            <p className={styles.eventDate}>{upcomingEventDate}</p>
-          </div>
-
-          <a href={ctaLink} className={styles.cta}>
-            {ctaText}
-          </a>
+          <Island module={QRButtonIsland} fieldValues={{ defaultUrl }} />
         </div>
       </div>
     </section>
   );
 }
 
-// Module fields (visible in HubSpot editor)
+// Module fields
 export const fields = (
   <ModuleFields>
-
-    <TextField 
+    <TextField
       name="title"
       label="Hero Title"
-      default="Discover and Share Amazing Events"
+      default="Generate Your QR Code Instantly"
     />
-
-    <TextField 
+    <TextField
       name="subtitle"
       label="Hero Subtitle"
-      default="Find upcoming events – concerts, workshops, meetups, and more."
+      default="Enter any URL and get a QR code you can use anywhere."
     />
-
     <ImageField
       name="backgroundImage"
       label="Background Image"
       default="https://images.unsplash.com/photo-1515165562835-c4c36c9f5237"
     />
-
     <TextField
-      name="upcomingEventTitle"
-      label="Upcoming Event Title"
-      default="Tech Innovators Summit 2025"
+      name="defaultUrl"
+      label="Default QR Code URL"
+      default=""
     />
-
-    <DateField
-      name="upcomingEventDate"
-      label="Upcoming Event Date"
-    />
-
-    <TextField
-      name="ctaText"
-      label="CTA Text"
-      default="Explore Events"
-    />
-
-    <TextField
-      name="ctaLink"
-      label="CTA Link"
-      default="/events"
-    />
-
   </ModuleFields>
 );
 
-// Module metadata
 export const meta = {
-  label: "Homepage Hero",
-  icon: "image-text"
+  label: "QR Code Landing Page Hero",
+  icon: "image-text",
 };
+
+export default Component;

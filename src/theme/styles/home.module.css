@@ -1,78 +1,122 @@
-.hero {
+/* Hero Landing Page */
+.heroLanding {
   width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.overlay {
-  width: 100%;
-  height: 100%;
-  background-image: url('https://media.licdn.com/dms/image/v2/C561BAQE-51J-8KkMZg/company-background_10000/company-background_10000/0/1584559866970/eventscom_cover?e=1765303200&v=beta&t=5NixgZl8AIrQthZS0FfR4oHA-ZZAPB36Q_CVoek1SBw');
+  min-height: 100vh;
   background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlayLanding {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.content {
-  margin-top: 100px;
+.contentLanding {
   text-align: center;
   color: #fff;
-  max-width: 700px;
-  padding: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-.title {
+/* Titles */
+.titleLanding {
   font-size: 3rem;
   font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitleLanding {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* QR Box */
+.qrLandingBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrInputLanding {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.ctaLanding {
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: none;
+  background: #ff3366;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+.ctaLanding:hover {
+  background: #ff5580;
+}
+
+/* QR Display */
+.qrDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrImageLanding {
+  width: 300px;
+  height: 300px;
+  border: 6px solid #fff;
+  border-radius: 15px;
   margin-bottom: 15px;
 }
 
-.subtitle {
-  font-size: 1.3rem;
-  opacity: 0.9;
-  margin-bottom: 40px;
-}
-
-.eventBox {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-}
-
-.eventHeading {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.eventTitle {
-  font-size: 1.1rem;
-}
-
-.eventDate {
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-.cta {
-  display: inline-block;
-  padding: 14px 32px;
-  background: #ff3366;
-  color: white;
+.ctaLandingDownload {
+  padding: 10px 24px;
   border-radius: 8px;
-  text-decoration: none;
+  border: none;
+  background: #33ccff;
+  color: #fff;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.cta:hover {
-  background: #ff5580;
+.ctaLandingDownload:hover {
+  background: #66ddff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .titleLanding {
+    font-size: 2.2rem;
+  }
+  .subtitleLanding {
+    font-size: 1.1rem;
+  }
+  .qrImageLanding {
+    width: 250px;
+    height: 250px;
+  }
 }

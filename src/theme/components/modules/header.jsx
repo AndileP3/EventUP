@@ -63,7 +63,7 @@ export const fields = (
     />
 
     <TextField name="homeText" label="Home Text" default="Home" />
-    <TextField name="aboutText" label="About Text" default="About" />
+    <TextField name="aboutText" label="About Text" default="Events" />
     <TextField name="servicesText" label="Services Text" default="Services" />
     <TextField name="blogText" label="Blog Text" default="Blog" />
     <TextField name="workText" label="Work Text" default="Work" />

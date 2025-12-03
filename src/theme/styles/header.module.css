@@ -1,14 +1,8 @@
 .header {
-  width: 80%;
+  width: 100%;
   padding: 10px 0;
-  background: #dbdbdb7d;
-  border: 1px solid #00c106ff;
-  border-radius: 50px;
-  margin: 20px auto 0;
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  background: #f9f9f944;
+  position: static;
 }
 
 .container {
@@ -36,14 +30,16 @@
 
 .link {
   font-size: 16px;
-  color: #333333ff;
+  color: #44e782ff;
   font-family: 'Arial', sans-serif;
   text-decoration: none;
   font-weight: 600;
   transition: color .3s ease;
+  border-bottom: 2px solid transparent;
 }
 
 .link:hover {
+  border-bottom: 2px solid #44e782ff;
   color: #44e782ff;
 }
 
