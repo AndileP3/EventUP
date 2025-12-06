@@ -8,7 +8,21 @@
 {% block body %}
   {# Test #}
   <main>
+   {% module "header_section" path="../components/modules/Header.jsx", label="Header Section" %}
+
   {% module "hero_section" path="../components/modules/hero.jsx", label="Hero Section" %}
+
+  {% module "Logos_section" path="../components/modules/LogosStrip.jsx", label="Logos Section" %}
+
+  {% module "value_section" path="../components/modules/ValueProps.jsx", label="Values Section" %}
+
+  {% module "case_studies_section" path="../components/modules/FeaturedCaseStudies.jsx", label="CaseStudies Section" %}
+
+  {% module "whatWedo_section" path="../components/modules/WhatWeDo.jsx", label="WhatWedo Section" %}
+  
+  {% module "clientstrust_section" path="../components/modules/WhyClientsTrustUs.jsx", label="WhyClientsTrustUs Section" %}
+
+  {% module "getintouch_section" path="../components/modules/CallToAction.jsx", label="GetInTouch Section" %}
   </main>
 
 {% endblock body %}
