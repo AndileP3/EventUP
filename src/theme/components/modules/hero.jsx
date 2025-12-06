@@ -2,26 +2,29 @@
 import { ModuleFields, TextField, ImageField } from "@hubspot/cms-components/fields";
 import { Island } from "@hubspot/cms-components";
 import CTAIsland from "../islands/CTAIsland?island";
+
 import styles from "../../styles/home.module.css";
 
-export function Component({ fieldValues }) {
-  const { title, subtitle, backgroundImage, ctaPrimary, ctaSecondary } = fieldValues;
+export function Component({ fieldValues = {} }) {
+  const {
+    title,
+    subtitle,
+    backgroundImage,
+    ctaPrimary,
+    ctaPrimaryLink,
+    ctaSecondary,
+    ctaSecondaryLink
+  } = fieldValues;
+
+  const bg = backgroundImage?.src || "/assets/mountains.jpeg";
 
   return (
-    <section
-      className={styles.heroSection}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      <header className={styles.header}>
-        <div className={styles.logo}>IntegriCloud</div>
-
-        <nav className={styles.nav}>
-          <a href="#services">Services</a>
-          <a href="#case-studies">Case Studies</a>
-          <a href="#about">About</a>
-          <a href="#contact" className={styles.contactBtn}>Contact</a>
-        </nav>
-      </header>
+    <section className={styles.heroSection}>
+      
+      <div
+        className={styles.heroBackground}
+        style={{ backgroundImage: `url(${bg})` }}
+      />
 
       <div className={styles.heroOverlay}>
         <div className={styles.heroContent}>
@@ -30,17 +33,16 @@ export function Component({ fieldValues }) {
 
           <Island
             module={CTAIsland}
-            fieldValues={{ ctaPrimary, ctaSecondary }}
+            fieldValues={{ ctaPrimary, ctaPrimaryLink, ctaSecondary, ctaSecondaryLink }}
           />
         </div>
       </div>
-      {/* THIRD WAVE LAYER */}
-  <div className={styles.waveLayer}></div>
+
+      <div className={styles.waveLayer}></div>
     </section>
   );
 }
 
-// Module fields
 export const fields = (
   <ModuleFields>
     <TextField
@@ -51,26 +53,19 @@ export const fields = (
     <TextField
       name="subtitle"
       label="Hero Subtitle"
-      default="We help CIOs and CRM leaders integrate Dynamics 365, Azure, and Power Platform with seamless architecture and exceptional service delivery."
+      default="We help CIOs and CRM leaders integrate Dynamics 365, Azure, and Power Platform."
     />
+
     <ImageField
       name="backgroundImage"
       label="Background Image"
-      default={{
-        src: "https://images.unsplash.com/photo-1551434678-e076c223a692",
-        alt: "Tech Integration Background",
-      }}
+      default={{ src: "/assets/mountains.jpeg", alt: "Mountains" }}
     />
-    <TextField
-      name="ctaPrimary"
-      label="Primary CTA Text"
-      default="Book a Consultation"
-    />
-    <TextField
-      name="ctaSecondary"
-      label="Secondary CTA Text"
-      default="View Case Studies"
-    />
+
+    <TextField name="ctaPrimary" label="Primary CTA Text" default="Book a Consultation" />
+    <TextField name="ctaPrimaryLink" label="Primary CTA Link" default="#" />
+    <TextField name="ctaSecondary" label="Secondary CTA Text" default="View Case Studies" />
+    <TextField name="ctaSecondaryLink" label="Secondary CTA Link" default="#" />
   </ModuleFields>
 );
 
