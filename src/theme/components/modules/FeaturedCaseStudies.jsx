@@ -4,21 +4,49 @@ import styles from "../../styles/featuredCaseStudies.module.css";
 export function Component({ fieldValues }) {
   const { heading, caseStudies } = fieldValues;
 
-  const caseStudiesArray = Array.isArray(caseStudies) && caseStudies.length > 0 ? caseStudies : [
-    { title: "Dynamics Adoption Boost", description: "Achieved 90% adoption within 3 months.", image: { src: "https://via.placeholder.com/300x200", alt: "Case Study 1" } },
-    { title: "ERP Integration Success", description: "Seamless Azure & ERP integration.", image: { src: "https://via.placeholder.com/300x200", alt: "Case Study 2" } },
-    { title: "ROI Improvement", description: "ROI increased by 35% post-implementation.", image: { src: "https://via.placeholder.com/300x200", alt: "Case Study 3" } },
-  ];
+  const caseStudiesArray =
+    Array.isArray(caseStudies?.caseStudies) && caseStudies.caseStudies.length > 0
+      ? caseStudies.caseStudies
+      : [
+          {
+            title: "Enhanced Customer Relationships",
+            description:
+              "Gain a 360-degree view of your customer interactions, improving customer satisfaction and retention.",
+            image: {
+              src: "https://www.orega.com/hubfs/bespoke-design-coral.svg",
+              alt: "Case Study 1",
+            },
+          },
+          {
+            title: "Increased Sales & Revenue",
+            description:
+              "Leverage advanced sales automation tools to streamline your sales processes, track leads, and close deals more efficiently.",
+            image: {
+              src: "https://www.orega.com/hubfs/meeting-room-orange.svg",
+              alt: "Case Study 2",
+            },
+          },
+          {
+            title: "Interdepartmental Collaboration",
+            description:
+              "Facilitate communication and collaboration across teams with shared access to customer data in real-time.",
+            image: {
+              src: "https://www.orega.com/hubfs/collaboration-spaces-coral-2.svg",
+              alt: "Case Study 3",
+            },
+          },
+        ];
 
   return (
     <section className={styles.caseStudiesSection}>
       {heading && <h2 className={styles.heading}>{heading}</h2>}
-      <div className={styles.sliderContainer}>
+
+      <div className={styles.cardsGrid}>
         {caseStudiesArray.map((item, index) => (
-          <div key={index} className={styles.slide}>
-            <img src={item.image?.src} alt={item.image?.alt} className={styles.slideImage} />
-            <h3 className={styles.slideTitle}>{item.title}</h3>
-            <p className={styles.slideDescription}>{item.description}</p>
+          <div key={index} className={styles.card}>
+            <img src={item.image?.src} alt={item.image?.alt} className={styles.cardImage} />
+            <h3 className={styles.cardTitle}>{item.title}</h3>
+            <p className={styles.cardDescription}>{item.description}</p>
           </div>
         ))}
       </div>
@@ -28,7 +56,7 @@ export function Component({ fieldValues }) {
 
 export const fields = (
   <ModuleFields>
-    <TextField name="heading" label="Section Heading" default="Featured Case Studies" />
+    <TextField name="heading" label="Section Heading" default="The Benefits Of A CRM System" />
     <FieldGroup name="caseStudies" label="Case Studies" repeating={true}>
       <TextField name="title" label="Title" />
       <TextField name="description" label="Description" />
@@ -37,5 +65,5 @@ export const fields = (
   </ModuleFields>
 );
 
-export const meta = { label: "Featured Case Studies Slider", icon: "images" };
+export const meta = { label: "The Benefits Of A CRM System", icon: "images" };
 export default Component;
