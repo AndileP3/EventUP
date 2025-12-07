@@ -4,13 +4,15 @@ import styles from "../../styles/valueProps.module.css";
 export function Component({ fieldValues }) {
   const { heading, valueProps } = fieldValues;
 
-  // Fallback valueProps if none added in CMS
-  const valuePropsArray = Array.isArray(valueProps) && valueProps.length > 0 ? valueProps : [
-    { text: "Dynamics 365 CRM Expertise" },
-    { text: "Complex Azure Integrations" },
-    { text: "Power Platform Automation" },
-    { text: "9.8/10 Client Satisfaction" },
-  ];
+  const valuePropsArray =
+    Array.isArray(valueProps?.valueProps) && valueProps.valueProps.length > 0
+      ? valueProps.valueProps
+      : [
+          { title: "Tailored CRM Solutions", description: "We recognise that each business is unique. Our approach to HubSpot CRM implementation is fully tailored to your business needs, ensuring you get the maximum ROI from your CRM investment." },
+          { title: "HubSpot Certified Experts", description: "Our team includes certified HubSpot consultants who have successfully implemented and optimised the platform for clients across various industries." },
+          { title: "Proven Track Record", description: "From startups to enterprises, we’ve implemented CRM systems that drive revenue, streamline operations, and improve customer retention." },
+         
+        ];
 
   return (
     <section className={styles.valuePropsSection}>
@@ -19,7 +21,8 @@ export function Component({ fieldValues }) {
       <div className={styles.cardsContainer}>
         {valuePropsArray.map((item, index) => (
           <div key={index} className={styles.card}>
-            <p className={styles.cardText}>{item.text || ""}</p>
+            {item.title && <h3 className={styles.cardTitle}>{item.title}</h3>}
+            {item.description && <p className={styles.cardText}>{item.description}</p>}
           </div>
         ))}
       </div>
@@ -27,18 +30,21 @@ export function Component({ fieldValues }) {
   );
 }
 
+
 // HubSpot Module Fields
 export const fields = (
   <ModuleFields>
     <TextField
       name="heading"
       label="Section Heading"
-      default="Why Clients Choose Us"
+      default="Why Our Clients Choose Us"
     />
 
     <FieldGroup name="valueProps" label="Value Propositions" repeating={true}>
-      <TextField name="text" label="Value Proposition Text" />
-    </FieldGroup>
+  <TextField name="title" label="Title" />
+  <TextField name="description" label="Description" />
+</FieldGroup>
+
   </ModuleFields>
 );
 
