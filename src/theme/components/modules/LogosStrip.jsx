@@ -6,10 +6,7 @@ export function Component({ fieldValues }) {
 
   // Fallback logos if none added in CMS
   const logosArray = Array.isArray(logos) && logos.length > 0 ? logos : [
-    { image: { src: "https://via.placeholder.com/150x50?text=Logo+1", alt: "Logo 1" } },
-    { image: { src: "https://via.placeholder.com/150x50?text=Logo+2", alt: "Logo 2" } },
-    { image: { src: "https://via.placeholder.com/150x50?text=Logo+3", alt: "Logo 3" } },
-    { image: { src: "https://via.placeholder.com/150x50?text=Logo+4", alt: "Logo 4" } },
+    { image: { src: "https://static.hsappstatic.net/ui-images/static-2.967/optimized/canvas/hubspot-wordmark.svg", alt: "Logo 1" } },
   ];
 
   return (
@@ -37,7 +34,7 @@ export const fields = (
     <TextField
       name="heading"
       label="Section Heading"
-      default="Our Clients & Partners"
+      default="Trusted by the best HubSpot customers"
     />
 
     <FieldGroup name="logos" label="Logos" repeating={true}>
