@@ -33,7 +33,7 @@ export function Component({ fieldValues = {} }) {
 
           <Island
             module={CTAIsland}
-            fieldValues={{ ctaPrimary, ctaPrimaryLink, ctaSecondary, ctaSecondaryLink }}
+            fieldValues={{ ctaPrimary, ctaPrimaryLink}}
           />
         </div>
       </div>
