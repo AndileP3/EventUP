@@ -10,7 +10,7 @@ export function Component({ fieldValues }) {
       {subheading && <p className={styles.subheading}>{subheading}</p>}
 
       {ctaText && ctaLink && (
-        <a href={ctaLink} className={styles.ctaButton}>{ctaText}</a>
+        <a href="/contact" className={styles.ctaButton}>{ctaText}</a>
       )}
     </section>
   );
@@ -21,7 +21,7 @@ export const fields = (
     <TextField name="heading" label="CTA Heading" default="Ready to Get Started?" />
     <TextField name="subheading" label="CTA Subheading" default="Book a consultation or contact us today." />
     <TextField name="ctaText" label="Button Text" default="Book Now" />
-    <TextField name="ctaLink" label="Button Link" default="#" />
+    <TextField name="ctaLink" label="Button Link" default="/contact" />
   </ModuleFields>
 );
 
