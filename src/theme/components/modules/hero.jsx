@@ -2,6 +2,7 @@
 import { ModuleFields, TextField, ImageField } from "@hubspot/cms-components/fields";
 import { Island } from "@hubspot/cms-components";
 import CTAIsland from "../islands/CTAIsland?island";
+import heroimage from "../../assets/mountains.jpeg";
 
 import styles from "../../styles/home.module.css";
 
@@ -16,7 +17,7 @@ export function Component({ fieldValues = {} }) {
     ctaSecondaryLink
   } = fieldValues;
 
-  const bg = backgroundImage?.src || "/assets/mountains.jpeg";
+  const bg = backgroundImage?.src || heroimage;
 
   return (
     <section className={styles.heroSection}>
@@ -59,7 +60,7 @@ export const fields = (
     <ImageField
       name="backgroundImage"
       label="Background Image"
-      default={{ src: "/assets/mountains.jpeg", alt: "Mountains" }}
+      default={{ src: "../../assets/mountains.jpeg", alt: "Mountains" }}
     />
 
     <TextField name="ctaPrimary" label="Primary CTA Text" default="Book a Consultation" />
