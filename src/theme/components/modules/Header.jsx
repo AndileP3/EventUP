@@ -7,10 +7,11 @@ export function Component({ fieldValues = {} }) {
   const { logoImage, logoText = "IntegriCloud" } = fieldValues;
 
   const defaultLinks = [
-    { text: "Services", href: "#services", isButton: "false" },
-    { text: "Case Studies", href: "#case-studies", isButton: "false" },
-    { text: "About", href: "#about", isButton: "false" },
-    { text: "Contact", href: "#contact", isButton: "true" },
+    { text: "Home", href: "/home", isButton: "false" },
+    { text: "About", href: "/about", isButton: "false" },
+    { text: "Services", href: "/services", isButton: "false" },
+    { text: "Pricing", href: "/pricing", isButton: "false" },
+    { text: "Contact", href: "/contact", isButton: "true" },
   ];
 
   const safeNavLinks = Array.isArray(fieldValues.navLinks) && fieldValues.navLinks.length > 0
