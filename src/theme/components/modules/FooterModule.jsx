@@ -12,7 +12,7 @@ export function Component({ fieldValues }) {
     Array.isArray(quickLinks) && quickLinks.length > 0
       ? quickLinks
       : [
-          { text: "Home", url: "/" },
+          { text: "Home", url: "/home" },
           { text: "Services", url: "/services" },
           { text: "About", url: "/about" },
           { text: "Contact", url: "/contact" },
@@ -91,7 +91,7 @@ export const fields = (
   <ModuleFields>
     {/* Remove the default prop from ImageField */}
     <ImageField name="logo" label="Company Logo" />
-    <TextField name="companyName" label="Company Name" default="Your Company" />
+    <TextField name="companyName" label="Company Name" default="More Info" />
     <TextField name="address" label="Address" default="123 Business St, City, Country" />
     <TextField name="email" label="Email" default="info@company.com" />
     <TextField name="phone" label="Phone" default="+27 123 456 789" />
