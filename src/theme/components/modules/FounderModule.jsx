@@ -19,7 +19,7 @@ export function Component({ fieldValues }) {
           {heading && <h2 className={styles.heading}>{heading}</h2>}
           {description && <p className={styles.description}>{description}</p>}
           {buttonText && (
-            <a href="#" className={styles.button}>
+            <a href="/about" className={styles.button}>
               {buttonText}
             </a>
           )}
@@ -39,7 +39,7 @@ export const fields = (
     />
     {/* Remove the default prop - it was causing the validation error */}
     <ImageField name="image" label="Founder Image" />
-    <TextField name="buttonText" label="Button Text" default="About" />
+    <TextField name="buttonText" label="Button Text" default="More About us" />
   </ModuleFields>
 );
 
