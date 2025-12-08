@@ -11,6 +11,9 @@ export function Component({ fieldValues }) {
           { title: "Tailored CRM Solutions", description: "We recognise that each business is unique. Our approach to HubSpot CRM implementation is fully tailored to your business needs, ensuring you get the maximum ROI from your CRM investment." },
           { title: "HubSpot Certified Experts", description: "Our team includes certified HubSpot consultants who have successfully implemented and optimised the platform for clients across various industries." },
           { title: "Proven Track Record", description: "From startups to enterprises, we’ve implemented CRM systems that drive revenue, streamline operations, and improve customer retention." },
+          { title: "Training and Development", description: "We provide comprehensive training for your team, ensuring they are well-versed in using the CRM system. This empowers your staff to leverage the full capabilities of the system, driving greater adoption and effectiveness." },
+          { title: "Strategic Partnership", description: "We don’t just leave after implementation. Our partnership approach means we provide continuous support, helping you refine and optimise your CRM as your business evolves." },
+          { title: "Data Security", description: "We prioritise the security and privacy of your customer data. Our CRM implementations adhere to the highest standards of data protection, ensuring that your sensitive information is safeguarded at all times." },
          
         ];
 
