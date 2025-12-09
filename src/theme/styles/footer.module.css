@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@300;400;700&display=swap');
+
+.footerSection {
+  background: #0d1b2a;
+  color: #fff;
+  padding: 4rem 2rem 2rem;
+  font-family: "Science Gothic", sans-serif;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.logoWrapper {
+  flex: 1 1 200px;
+}
+
+.logo {
+  max-width: 250px;
+}
+
+.infoWrapper {
+  flex: 1 1 250px;
+  line-height: 1.6;
+}
+
+.infoWrapper a {
+  color: #4fc3f7;
+  text-decoration: none;
+}
+
+.infoWrapper a:hover {
+  text-decoration: underline;
+}
+
+.linksWrapper {
+  flex: 1 1 200px;
+}
+
+.linksWrapper h4 {
+  margin-bottom: 0.8rem;
+}
+
+.linksWrapper ul {
+  list-style: none;
+  padding: 0;
+}
+
+.linksWrapper li {
+  margin-bottom: 0.5rem;
+}
+
+.linksWrapper a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linksWrapper a:hover {
+  color: #4fc3f7;
+}
+
+.socialWrapper {
+  flex: 1 1 200px;
+}
+
+.socialWrapper h4 {
+  margin-bottom: 0.8rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.socialIcons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.socialIcons img:hover {
+  transform: scale(1.1);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logoWrapper, .infoWrapper, .linksWrapper, .socialWrapper {
+    flex: 1 1 100%;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}
