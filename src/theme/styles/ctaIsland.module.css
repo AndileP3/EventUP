@@ -7,20 +7,53 @@
 }
 
 .primaryBtn {
-  background: #0078ff;
+  position: relative;
+  background: transparent;
   color: #fff;
   padding: 0.75rem 2rem;
   font-size: 1.1rem;
-  border-radius: 12px;
   font-weight: 700;
-  border: none;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  border: none;
+  outline: none;
+  text-decoration: none;
 }
 
+/* Base corner style */
+.primaryBtn::before,
+.primaryBtn::after {
+  content: "";
+  position: absolute;
+  width: 20px;      /* animated from 0 → 20px */
+  height: 20px;
+  border: 2px solid #fff;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Top-left */
+.primaryBtn::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Bottom-right */
+.primaryBtn::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* Hover effect */
+.primaryBtn:hover::before,
+.primaryBtn:hover::after {
+  width: 80%;
+  height: 80%;
+}
 .primaryBtn:hover {
-  background: #005fcc;
-  transform: translateY(-2px);
+    background: #ffffff38;
 }
 
 .secondaryBtn {
