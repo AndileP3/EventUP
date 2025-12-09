@@ -7,9 +7,13 @@ export default function CTAIsland({ fieldValues }) {
   return (
     <div className={styles.ctaContainer}>
       {ctaPrimary && (
-        <button className={styles.primaryBtn} onClick={() => window.location.href = ctaPrimaryLink || "#"}>
-          {ctaPrimary}
-        </button>
+     <a
+        href="/contact"
+        className={styles.primaryBtn}
+      >
+        {ctaPrimary}
+      </a>
+
       )}
       {ctaSecondary && (
         <button className={styles.secondaryBtn} onClick={() => window.location.href = ctaSecondaryLink || "#"}>
