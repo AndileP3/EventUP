@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100;400;700;900&display=swap');
+
+/* ----------- SECTION WRAPPER ----------- */
+.aboutSection {
+    font-family: 'Science Gothic', sans-serif;
+  padding: 6rem 2rem;
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+}
+
+/* ----------- HEADER / HERO SMALL BANNER ----------- */
+
+/* =============================
+   Heading
+   ============================= */
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 800;
+  color: #0d1b2a;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  margin: 1.2rem auto 0 auto;
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  border-radius: 10px;
+}
+
+/* ----------- CONTENT BLOCKS (STORY, HUBSPOT, MISSION) ----------- */
+.contentBlock {
+  margin-bottom: 50px;
+}
+.ourStoryBlock{
+   text-align: center;
+   max-width: 80vw;
+    margin: auto;
+    
+}
+
+.poweredByBlock {
+  position: relative;
+  background-image: url('https://static.hsappstatic.net/ui-images/static-2.967/optimized/canvas/hubspot-wordmark.svg'); /* make sure this image exists in your assets */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 250px;
+  max-width: 90vw;
+  margin: 60px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffffff;
+  padding: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  overflow: hidden; /* ensure content stays inside rounded corners */
+}
+
+/* optional overlay for extra darkness, only semi-transparent */
+.poweredByBlock::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.48); /* reduced from 0.5 to 0.3 so image is visible */
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.poweredByBlock > * {
+  position: relative;
+  z-index: 2; /* ensures text appears above overlay */
+}
+
+
+
+.contentBlock h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #142e43;
+}
+
+.contentBlock p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  max-width: 900px;
+}
+
+/* ----------- FOUNDER SECTION ----------- */
+.founderWrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  text-align: left;
+  margin: 70px 0;
+  flex-wrap: wrap;
+}
+
+.founderLeft img {
+  width: 320px;
+  height: 380px;
+  text-align: left;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.founderRight {
+  flex: 1;
+  min-width: 300px;
+}
+
+.founderRight h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #142e43;
+}
+
+.founderName {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0081d7ff;
+  margin-bottom: 4px;
+}
+
+.founderTitle {
+  color: #12d300ff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.founderBio {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 650px;
+}
+
+/* ----------- FOUNDER ACTION BUTTONS ----------- */
+.founderActions {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.linkedinBtn,
+.callBtn {
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.linkedinBtn {
+  background: #0077b5;
+  color: white;
+}
+
+.linkedinBtn:hover {
+  background: #005a87;
+}
+
+.callBtn {
+  background: #00bfff;
+  color: white;
+}
+
+.callBtn:hover {
+  background: #009acd;
+}
+
+.missionSection {
+  display: flex;
+  gap: 50px;
+  margin: 80px auto;
+  max-width: 1200px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 150px;
+}
+
+.missionLeft {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.missionImage {
+  width: 50%;
+  height: auto;
+ 
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.missionText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 10px;
+}
+
+.missionRight {
+  flex: 1.2;
+  min-width: 300px;
+}
+
+.missionRight h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.missionRight p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ----------- CORE VALUES ----------- */
+.valuesWrapper {
+   text-align: center;
+   
+  margin-top: 40px;
+}
+
+.valuesWrapper h3 {
+  font-size: 1.7rem;
+  color: #142e43;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.valuesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.valueCard {
+  background: #007aaaff;
+  padding: 18px 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  border: 1px solid #0f8ef6ff;
+  transition: 0.25s ease;
+  
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.15);
+}
+
+.valueCard p {
+  margin: 0;
+  font-size: 1rem;
+  color: #efefefff;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 820px) {
+  .founderWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founderLeft img {
+    width: 260px;
+    height: 330px;
+  }
+
+  .founderActions {
+    justify-content: center;
+  }
+
+  .headerInner h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.topHeadingWrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 4rem auto;
+  padding: 3.5rem 2rem;
+
+  background: linear-gradient(
+      rgba(0, 10, 25, 0.65),
+      rgba(0, 10, 30, 0.75)
+    ),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d")
+      center/cover no-repeat;
+
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(4px);
+}
+
+/* optional glow edge */
+.topHeadingWrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 40px;
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 153, 255, 0.4),
+    transparent 70%
+  );
+
+  filter: blur(30px);
+  opacity: 0.55;
+}
+
+/* heading inside the hero bar */
+.heading {
+  color: white !important;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.heading::after {
+  background: #00c6ff !important;
+}
