@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@300;400;700&display=swap');
+
+.processSection {
+    font-family: 'Science Gothic', sans-serif;
+  padding: 6rem 2rem;
+  background: linear-gradient(145deg, #0d1b2a, #1b263b);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.processSection::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -120px;
+  right: -120px;
+  background: rgba(255,255,255,0.04);
+  filter: blur(160px);
+  border-radius: 50%;
+}
+
+.heading {
+  font-family: "Science Gothic", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  font-weight: 700;
+}
+
+/* TIMELINE */
+.timelineContainer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timelineContainer::before {
+  content: "";
+  position: absolute;
+  left: 35px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(#4fc3f7, #82b1ff);
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.8);
+}
+
+.stepWrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+/* Circle markers */
+.stepMarker {
+  position: relative;
+  margin-right: 2rem;
+}
+
+.stepMarker::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  background: #4fc3f7;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #4fc3f7, 0 0 20px rgba(79,195,247,0.6);
+}
+
+.stepNumber {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0.85;
+  position: relative;
+  top: -20px;
+  left: -28px;
+}
+
+/* Step Card */
+.stepCard {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  padding: 1.8rem 2rem;
+  border-radius: 18px;
+  width: 100%;
+  transition: 0.35s ease;
+  position: relative;
+}
+
+.stepCard:hover {
+  transform: translateX(10px);
+  border-color: rgba(79,195,247,0.4);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+.stepDescription {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .timelineContainer {
+    padding-left: 0;
+  }
+
+  .timelineContainer::before {
+    left: 20px;
+  }
+
+  .stepWrapper {
+    flex-direction: row;
+  }
+}
