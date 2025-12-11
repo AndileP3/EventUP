@@ -1,0 +1,22 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Pricing Template
+-->
+{% extends "./layouts/base.hubl.html" %}
+
+{% block body %}
+  {# Test #}
+  <main>
+  {% module "header_section" path="../components/modules/Header.jsx", label="Header Section" %}
+
+  {% module "pricing_section" path="../components/modules/Pricing.jsx", label="Pricing Section" %}
+   
+  {% module "steps_section" path="../components/modules/OurProcess.jsx", label="steps Section" %}
+
+    {% module "getintouch_section" path="../components/modules/CallToAction.jsx", label="GetInTouch Section" %}
+
+  {% module "footer_section" path="../components/modules/FooterModule.jsx", label="Footer Section" %}
+  </main>
+
+{% endblock body %}
