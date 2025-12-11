@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100;400;700;900&display=swap');
+
+.heroSection {
+  display: flex;
+  
+  min-height: 20vh; /* Full screen */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+   margin-top:100px;
+}
+
+
+
+.contentWrapper {
+  max-width: 800px;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
