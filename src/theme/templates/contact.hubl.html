@@ -1,0 +1,19 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact Template
+-->
+{% extends "./layouts/base.hubl.html" %}
+
+{% block body %}
+  {# Test #}
+  <main>
+  {% module "header_section" path="../components/modules/Header.jsx", label="Header Section" %}
+
+  {% module "contact_section" path="../components/modules/Contact.jsx", label="contact Section" %}
+   
+
+  {% module "footer_section" path="../components/modules/FooterModule.jsx", label="Footer Section" %}
+  </main>
+
+{% endblock body %}
