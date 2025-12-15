@@ -75,6 +75,7 @@
   z-index: 1;
   border-radius: 12px;
 }
+
 .poweredByBlock > * {
   position: relative;
   z-index: 2; /* ensures text appears above overlay */
